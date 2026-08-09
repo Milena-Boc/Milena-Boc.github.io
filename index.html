@@ -7,7 +7,7 @@
 <meta name="description" content="Milena Boc — hospitality operator, Oxford-trained in AI, writing at the intersection of luxury service and technology.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --parchment: #F6F0E3;
@@ -62,7 +62,7 @@
   section:last-of-type { border-bottom: none; }
 
   .hero { padding-top: 130px; padding-bottom: 90px; }
-  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: center; }
   .hero-photo-frame {
     position: relative; overflow: hidden; border: 1px solid var(--line);
     aspect-ratio: 4 / 5; box-shadow: 10px 10px 0 rgba(110,31,31,0.08);
@@ -84,8 +84,8 @@
     color: var(--oxblood); margin-bottom: 18px; font-weight: 600;
   }
   h1.name {
-    font-family: 'Cinzel', serif; font-weight: 600; text-transform: uppercase;
-    font-size: 3.4rem; letter-spacing: 0.03em; margin-bottom: 22px; line-height: 1.12;
+    font-family: 'Cormorant', serif; font-weight: 600; text-transform: uppercase;
+    font-size: 3.8rem; letter-spacing: 0.045em; margin-bottom: 22px; line-height: 1.1;
     color: var(--espresso);
   }
   .cursive {
@@ -141,8 +141,6 @@
   @media (max-width: 640px) {
     .story-photo { float: none; width: 100%; max-width: 280px; margin: 0 auto 24px; display: block; }
   }
-  #projects .card { transition: transform 0.25s ease-out, box-shadow 0.25s ease-out; }
-  #projects .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(46,33,24,0.16); }
 
   .timeline-item {
     display: grid; grid-template-columns: 190px 1fr; gap: 24px;
@@ -170,6 +168,9 @@
     font-size: 1.08rem; color: var(--ink); margin-bottom: 14px;
   }
   .testimonial-attr { font-size: 0.83rem; color: var(--ink-soft); font-weight: 500; letter-spacing: 0.02em; }
+
+  #projects .card { transition: transform 0.25s ease-out, box-shadow 0.25s ease-out; }
+  #projects .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(46,33,24,0.16); }
 
   .writing-block {
     background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--oxblood);
@@ -275,7 +276,7 @@
   }
 
   @media (max-width: 640px) {
-    h1.name { font-size: 2.3rem; }
+    h1.name { font-size: 2.5rem; }
     .timeline-item { grid-template-columns: 1fr; gap: 8px; }
     .grid-2 { grid-template-columns: 1fr; }
     .navlinks { display: none; }
@@ -318,9 +319,6 @@
           <a class="btn" href="#writing">Read the Writing</a>
         </div>
       </div>
-      <div class="hero-photo-frame">
-        <img src="images/hero.jpg" alt="Milena Boc" fetchpriority="high">
-      </div>
     </div>
   </div>
 </section>
@@ -329,7 +327,6 @@
   <div class="wrap">
     <span class="numeral">I</span>
     <h2 class="section-title"><span class="eyebrow">Story</span>Built across <span class="cursive">three countries</span></h2>
-    <div class="story-photo"><img src="images/story-photo.png" alt="Milena Boc" loading="lazy"></div>
     <p class="lead">It all started in Mexico: a boutique wedding and events business, built for international couples marrying somewhere they'd fallen in love with, and wanting to bring the people who matter to them to experience the warmth of Mexico.</p>
     <p>Maine came next: two luxury resort properties, front desk to restaurant management to running events. That cross-training teaches you, in detail, that a hotel is one enormous machine with many rooms, each with its own design and its own customer journey:</p>
     <ul class="story-list">
@@ -340,7 +337,8 @@
     <p>Alongside it, a bilingual community I founded to connect English and Spanish speakers across hospitality, business, and later technology. Three years of building something bilingual, because I've lived what it means to work between two languages myself.</p>
     <p>Cambridge is where it is now: rebuilding the events department of a Hilton property into a commercial engine, built on data and innovation.</p>
     <p>In between all of it, a formal detour into Oxford's Saïd Business School AI Programme. Not a pivot away from hospitality, but the other half of a question I ask myself in everything I do: how do you deliver something that holds value, something memorable and genuinely excellent, for the people running it and the people receiving it.</p>
-    <p>The throughline is ownership: start with a vision, then work backwards toward it, one deliberate step at a time. Build in the feedback loops early. Stay alert to the routes you hadn't planned on. Connect the dots backwards until they resolve into something real, a project, a vision, an event.</p>  </div>
+    <p>The throughline is ownership: start with a vision, then work backwards toward it, one deliberate step at a time. Build in the feedback loops early. Stay alert to the routes you hadn't planned on. Connect the dots backwards until they resolve into something real, a project, a vision, an event.</p>
+  </div>
 </section>
 
 <section id="experience">
