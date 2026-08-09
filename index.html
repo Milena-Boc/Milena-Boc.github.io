@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milena Boc</title>
+<meta name="description" content="Milena Boc — hospitality operator, Oxford-trained in AI, writing at the intersection of luxury service and technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #F6F0E3;
+    --ink: #221D17;
+    --ink-soft: #52493D;
+    --oxblood: #6E1F1F;
+    --oxblood-deep: #55191A;
+    --espresso: #2E2118;
+    --line: #DED2BA;
+    --card: #FCFAF3;
+    --oxblood-light: #B06A5A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--espresso);
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(246,240,227,0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 860px; margin: 0 auto; padding: 18px 32px;
+  }
+  .mark {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--oxblood);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.04em;
+    color: var(--parchment); font-weight: 600;
+  }
+  .navlinks { display: flex; gap: 26px; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; }
+  .navlinks a { opacity: 0.7; transition: opacity 0.2s; color: var(--ink-soft); }
+  .navlinks a:hover { opacity: 1; color: var(--oxblood); }
+
+  section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+
+  .hero { padding-top: 130px; padding-bottom: 90px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+  .hero-photo-frame {
+    position: relative; overflow: hidden; border: 1px solid var(--line);
+    aspect-ratio: 4 / 5; box-shadow: 10px 10px 0 rgba(110,31,31,0.08);
+  }
+  .hero-photo-frame img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: sepia(0.14) saturate(1.08) contrast(1.04);
+  }
+  .hero-photo-frame::after {
+    content: ""; position: absolute; inset: 0; background: var(--oxblood);
+    opacity: 0.09; mix-blend-mode: multiply; pointer-events: none;
+  }
+  @media (max-width: 780px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo-frame { max-width: 340px; order: -1; margin-bottom: 32px; }
+  }
+  .eyebrow {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--oxblood); margin-bottom: 18px; font-weight: 600;
+  }
+  h1.name {
+    font-family: 'Cinzel', serif; font-weight: 600; text-transform: uppercase;
+    font-size: 3.4rem; letter-spacing: 0.03em; margin-bottom: 22px; line-height: 1.12;
+    color: var(--espresso);
+  }
+  .cursive {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500;
+    color: var(--oxblood); text-transform: none; letter-spacing: 0;
+  }
+  .lede { font-size: 1.28rem; color: var(--ink-soft); max-width: 600px; margin-bottom: 14px; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+  .lede-sub { font-size: 1.02rem; color: var(--ink-soft); max-width: 580px; }
+  .epigraph {
+    margin-top: 36px; padding-top: 24px; border-top: 2px solid var(--oxblood);
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem;
+    color: var(--ink-soft); max-width: 460px;
+  }
+  .hero-actions { display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
+
+  .numeral {
+    font-family: 'Cinzel', serif; font-size: 0.78rem; font-weight: 600;
+    color: var(--parchment); background: var(--oxblood); letter-spacing: 0.05em;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; border-radius: 50%; margin-bottom: 22px;
+  }
+  h2.section-title { font-size: 1.85rem; margin-bottom: 40px; }
+  .section-title .eyebrow { display: block; margin-bottom: 12px; }
+
+  .subhead {
+    font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--ink-soft); font-weight: 500; margin: 36px 0 4px;
+  }
+  .subhead:first-of-type { margin-top: 0; }
+
+  .story p { max-width: 630px; margin-bottom: 20px; font-size: 1.05rem; color: var(--ink-soft); }
+  .story p:last-child { margin-bottom: 0; }
+  .story p.lead::first-letter {
+    font-family: 'Cinzel', serif; font-size: 3.2rem; float: left;
+    line-height: 0.8; padding-right: 10px; padding-top: 6px; color: var(--oxblood);
+  }
+  .story-list { list-style: none; margin: 0 0 20px; padding: 0; max-width: 600px; }
+  .story-list li {
+    position: relative; padding-left: 20px; margin-bottom: 8px;
+    font-size: 1.05rem; color: var(--ink-soft);
+  }
+  .story-list li::before {
+    content: ""; position: absolute; left: 0; top: 0.55em;
+    width: 7px; height: 7px; background: var(--oxblood);
+  }
+  .story-photo {
+    float: right; width: 250px; margin: 4px 0 24px 32px;
+    border: 1px solid var(--line); box-shadow: 8px 8px 0 rgba(110,31,31,0.07);
+  }
+  .story-photo img {
+    width: 100%; display: block; filter: sepia(0.14) saturate(1.08) contrast(1.04);
+  }
+  @media (max-width: 640px) {
+    .story-photo { float: none; width: 100%; max-width: 280px; margin: 0 auto 24px; display: block; }
+  }
+  #projects .card { transition: transform 0.25s ease-out, box-shadow 0.25s ease-out; }
+  #projects .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(46,33,24,0.16); }
+
+  .timeline-item {
+    display: grid; grid-template-columns: 190px 1fr; gap: 24px;
+    padding: 26px 0; border-top: 1px solid var(--line);
+  }
+  .timeline-item:first-of-type { border-top: none; }
+  .t-period { font-size: 0.83rem; color: var(--oxblood); font-weight: 600; letter-spacing: 0.02em; }
+  .t-role { font-family: 'Playfair Display', serif; font-size: 1.16rem; margin-bottom: 6px; }
+  .t-org { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 10px; font-style: italic; }
+  .t-desc { font-size: 0.97rem; color: var(--ink-soft); max-width: 500px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--oxblood);
+    padding: 30px; font-size: 0.97rem; color: var(--ink-soft);
+  }
+  .card h3 { font-size: 1.08rem; color: var(--espresso); margin-bottom: 12px; }
+  .card .status {
+    display: inline-block; font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--oxblood); border: 1px solid var(--oxblood);
+    padding: 3px 12px; margin-top: 16px;
+  }
+  .testimonial-quote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.08rem; color: var(--ink); margin-bottom: 14px;
+  }
+  .testimonial-attr { font-size: 0.83rem; color: var(--ink-soft); font-weight: 500; letter-spacing: 0.02em; }
+
+  .writing-block {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--oxblood);
+    padding: 40px; max-width: 640px;
+  }
+  .writing-block p { color: var(--ink-soft); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; margin-bottom: 24px; }
+  .btn {
+    position: relative; z-index: 0; overflow: hidden;
+    display: inline-block; border: 1px solid var(--espresso); padding: 12px 26px;
+    font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--espresso); transition: color 0.25s ease-out;
+    --btn-fill: var(--espresso);
+  }
+  .btn::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: var(--btn-fill); transform: scaleX(0); transform-origin: left center;
+    transition: transform 0.25s ease-out;
+  }
+  .btn:hover { color: var(--parchment); }
+  .btn:hover::before { transform: scaleX(1); }
+  .btn-solid { --btn-fill: var(--oxblood); background: var(--espresso); color: var(--parchment); border-color: var(--espresso); }
+
+  .connect-grid { display: flex; flex-wrap: wrap; gap: 14px; }
+  .connect-link {
+    border: 1px solid var(--line); background: var(--card);
+    padding: 16px 24px; font-size: 0.94rem; flex: 1 1 200px;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: border-color 0.2s;
+  }
+  .connect-link:hover { border-color: var(--oxblood); }
+  .connect-link .arrow { color: var(--oxblood); display: inline-block; transition: transform 0.2s ease-out; }
+  .connect-link:hover .arrow { transform: translate(3px, -3px); }
+  .connect-link .icon-label { display: flex; align-items: center; gap: 12px; }
+  .connect-link svg { width: 20px; height: 20px; stroke: var(--oxblood); flex-shrink: 0; transition: transform 0.2s ease-out; }
+  .connect-link:hover svg { transform: translateX(2px); }
+
+  footer { padding: 46px 0; text-align: center; font-size: 0.8rem; color: var(--ink-soft); }
+
+  section#writing { background: var(--espresso); border-bottom: none; }
+  section#writing .eyebrow { color: var(--oxblood-light); }
+  section#writing h2.section-title { color: var(--parchment); }
+  section#writing .cursive { color: var(--oxblood-light); }
+  section#writing .numeral { background: var(--oxblood-light); color: var(--espresso); }
+  section#writing .writing-block {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.14);
+    border-left: 3px solid var(--oxblood-light);
+  }
+  section#writing .writing-block p { color: var(--parchment); }
+  section#writing .btn { border-color: var(--parchment); color: var(--parchment); --btn-fill: var(--parchment); }
+  section#writing .btn:hover { color: var(--espresso); }
+
+  /* ---- Animation & interaction layer ---- */
+
+  header { transition: background-color 0.4s ease-out, backdrop-filter 0.4s ease-out; }
+  header.scrolled { background: rgba(246,240,227,0.98); backdrop-filter: blur(14px); }
+
+  .timeline-track { position: relative; }
+  .timeline-line { position: absolute; left: 190px; top: 0; width: 2px; height: 100%; overflow: visible; pointer-events: none; }
+  .timeline-line line { stroke: var(--oxblood); stroke-width: 2; }
+  @media (max-width: 640px) { .timeline-line { display: none; } }
+
+  .js-anim .hero-grid > div > * {
+    opacity: 0; transform: translateY(16px);
+    transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  }
+  .js-anim .hero-grid > div > *:nth-child(1) { transition-delay: 0ms; }
+  .js-anim .hero-grid > div > *:nth-child(2) { transition-delay: 90ms; }
+  .js-anim .hero-grid > div > *:nth-child(3) { transition-delay: 180ms; }
+  .js-anim .hero-grid > div > *:nth-child(4) { transition-delay: 270ms; }
+  .js-anim .hero-grid > div > *:nth-child(5) { transition-delay: 360ms; }
+  .js-anim .hero-grid > div > *:nth-child(6) { transition-delay: 450ms; }
+  .js-anim .hero-photo-frame img {
+    opacity: 0; transform: scale(1.04);
+    transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
+  }
+  .js-anim .hero.is-loaded .hero-grid > div > *,
+  .js-anim .hero.is-loaded .hero-photo-frame img { opacity: 1; transform: none; }
+
+  .js-anim .numeral {
+    transform: scale(0.8); opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  .js-anim .numeral.is-in { transform: scale(1); opacity: 1; }
+
+  .js-anim :where(#story .wrap > *:not(.numeral)),
+  .js-anim :where(#experience .subhead),
+  .js-anim :where(#experience .timeline-item),
+  .js-anim :where(#experience .grid-2 > .card),
+  .js-anim :where(#projects .grid-2 > .card),
+  .js-anim :where(#writing .writing-block),
+  .js-anim :where(#connect .connect-link) {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .js-anim .is-in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    header { transition: none; }
+    #projects .card,
+    .connect-link .arrow,
+    .connect-link svg { transition: none !important; }
+    #projects .card:hover { transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    h1.name { font-size: 2.3rem; }
+    .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .navlinks { display: none; }
+    section { padding: 64px 0; }
+  }
+</style>
+</head>
+<body>
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add(reduce ? 'reduced-motion' : 'js-anim');
+})();
+</script>
+
+<header>
+  <nav>
+    <div class="mark">MB</div>
+    <div class="navlinks">
+      <a href="#story">Story</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="#connect">Connect</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Cambridge, United Kingdom</div>
+        <h1 class="name">Milena Boc</h1>
+        <p class="lede">Where luxury experience meets artificial intelligence.</p>
+        <p class="lede-sub">Trained in hospitality. Trained through an AI programme at Oxford. I write about what happens when you bridge the two to work together.</p>
+        <p class="epigraph">"Embrace your complexity, it's your advantage."</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#story">The Story</a>
+          <a class="btn" href="#writing">Read the Writing</a>
+        </div>
+      </div>
+      <div class="hero-photo-frame">
+        <img src="images/hero.jpg" alt="Milena Boc" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <span class="numeral">I</span>
+    <h2 class="section-title"><span class="eyebrow">Story</span>Built across <span class="cursive">three countries</span></h2>
+    <div class="story-photo"><img src="images/story-photo.png" alt="Milena Boc" loading="lazy"></div>
+    <p class="lead">It all started in Mexico: a boutique wedding and events business, built for international couples marrying somewhere they'd fallen in love with, and wanting to bring the people who matter to them to experience the warmth of Mexico.</p>
+    <p>Maine came next: two luxury resort properties, front desk to restaurant management to running events. That cross-training teaches you, in detail, that a hotel is one enormous machine with many rooms, each with its own design and its own customer journey:</p>
+    <ul class="story-list">
+      <li>Some for guests</li>
+      <li>Some for food and drink</li>
+      <li>Some for the events themselves</li>
+    </ul>
+    <p>Alongside it, a bilingual community I founded to connect English and Spanish speakers across hospitality, business, and later technology. Three years of building something bilingual, because I've lived what it means to work between two languages myself.</p>
+    <p>Cambridge is where it is now: rebuilding the events department of a Hilton property into a commercial engine, built on data and innovation.</p>
+    <p>In between all of it, a formal detour into Oxford's Saïd Business School AI Programme. Not a pivot away from hospitality, but the other half of a question I ask myself in everything I do: how do you deliver something that holds value, something memorable and genuinely excellent, for the people running it and the people receiving it.</p>
+    <p>The throughline is ownership: start with a vision, then work backwards toward it, one deliberate step at a time. Build in the feedback loops early. Stay alert to the routes you hadn't planned on. Connect the dots backwards until they resolve into something real, a project, a vision, an event.</p>  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <span class="numeral">II</span>
+    <h2 class="section-title"><span class="eyebrow">Experience</span>Where the work has <span class="cursive">happened</span></h2>
+
+    <div class="timeline-track">
+    <svg class="timeline-line" preserveAspectRatio="none" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="100%"></line></svg>
+    <div class="subhead">Work</div>
+
+    <div class="timeline-item">
+      <div class="t-period">Jan 2025 — Present</div>
+      <div>
+        <div class="t-role">Head of Events</div>
+        <div class="t-org">The Fellows House, Curio Collection by Hilton — Cambridge, UK</div>
+        <div class="t-desc">Leads event strategy, brand partnerships, and experience innovation for a Curio Collection property. Rebuilt pricing, forecasting, and outreach from scratch, growing revenue more than 150% by expanding from corporate business into weddings, social events, and brand activations.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">Sep 2022 — Sep 2025</div>
+      <div>
+        <div class="t-role">Founder &amp; Marketing Director</div>
+        <div class="t-org">Maboc — closed 2025</div>
+        <div class="t-desc">A platform and series of events where people across hospitality, business, and technology connected and converged, in English and Spanish. Led the marketing and the educational side of it.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">Dec 2021 — Nov 2024</div>
+      <div>
+        <div class="t-role">CEO, Wedding &amp; Event Planner</div>
+        <div class="t-org">Maboc Events — Mexico, closed 2024</div>
+        <div class="t-desc">Founded and ran a boutique wedding and events agency for international couples marrying in Mexico. Three years, end to end: concept, vendor management, on-site delivery.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">Jun 2023 — Jul 2024</div>
+      <div>
+        <div class="t-role">Management Associate</div>
+        <div class="t-org">Kennebunkport Resort Collection — Maine, USA</div>
+        <div class="t-desc">Cross-functional grounding across two luxury resort properties. Advanced from front desk, to restaurant management, to events management.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">May 2022 — Dec 2022</div>
+      <div>
+        <div class="t-role">Internship Trainee</div>
+        <div class="t-org">Secretaría de Turismo de México</div>
+        <div class="t-desc">Supported community-focused tourism initiatives alongside local boards and small businesses, an early, practical introduction to public-sector strategy work.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">Feb 2020 — Jun 2021</div>
+      <div>
+        <div class="t-role">Banquet &amp; Event Coordinator</div>
+        <div class="t-org">Las Mañanitas Hotel, Garden, Restaurant &amp; Spa, Relais &amp; Châteaux — Cuernavaca, Mexico</div>
+        <div class="t-desc">Coordinated banquets, weddings, and private events across the hotel's restaurant and gardens at a Relais &amp; Châteaux property.</div>
+      </div>
+    </div>
+
+    <div class="subhead">Education</div>
+
+    <div class="timeline-item">
+      <div class="t-period">2025</div>
+      <div>
+        <div class="t-role">Oxford AI Programme</div>
+        <div class="t-org">Saïd Business School, University of Oxford</div>
+        <div class="t-desc">Foundations of artificial intelligence, ethics, and business applications. Grade: 95.5.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">2024</div>
+      <div>
+        <div class="t-role">MicroMasters in International Hospitality Management</div>
+        <div class="t-org">The Hong Kong Polytechnic University</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="t-period">2019 — 2023</div>
+      <div>
+        <div class="t-role">Bachelor's in Management of Tourism Enterprises</div>
+        <div class="t-org">Universidad Internacional</div>
+        <div class="t-desc">Includes an exchange at Universidad Anáhuac México Norte.</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="subhead">In Their Words</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <p class="testimonial-quote">"I have had the pleasure of working with Milena on several brand collaborations and events, and I can confidently say she is an exceptional Events Manager. Her professionalism, creativity, and attention to detail consistently stood out in every project we worked on together."</p>
+        <div class="testimonial-attr">— Andra Fenyes</div>
+      </div>
+      <div class="card">
+        <p class="testimonial-quote">"We all want a dream wedding, and planning a destination wedding was somewhat worrying at first, until we met Milena, who made it all possible. Her honesty, dedication, organisation, personal interest, focus, follow-up, attention to detail, and coordination were without exception sublime."</p>
+        <div class="testimonial-attr">— Guadalupe &amp; Josué, 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <span class="numeral">III</span>
+    <h2 class="section-title"><span class="eyebrow">Projects</span><span class="cursive">Selected</span> work</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>The Fellows House</h3>
+        <p>What's currently on at the Cambridge property where I lead events.</p>
+        <a class="btn" style="margin-top:16px; display:inline-block;" href="https://thefellowshouse.com/" target="_blank" rel="noopener">See what's on</a>
+      </div>
+      <div class="card">
+        <h3>Destination weddings, Maboc Events</h3>
+        <p>Three years of bespoke, boutique wedding planning in Mexico for international couples, end to end: concept, vendor management, on-site delivery.</p>
+        <span class="status">Case study coming soon</span>
+      </div>
+      <div class="card">
+        <h3>Technical experiments</h3>
+        <p>I read to understand something, then build a small version of it to see if I actually do. That's the practical half of how I learn.</p>
+        <span class="status">In progress</span>
+      </div>
+      <div class="card">
+        <h3>Templates &amp; prompts</h3>
+        <p>A working library of the templates and AI prompts I actually use, for events planning, hospitality operations, and content.</p>
+        <span class="status">Launching soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div class="wrap">
+    <span class="numeral">IV</span>
+    <h2 class="section-title"><span class="eyebrow">Writing</span>On <span class="cursive">Substack</span></h2>
+    <div class="writing-block">
+      <p>"This space brings together hospitality, AI, creativity, and growth. I share reflections and lessons from building a global career shaped by curiosity and reinvention."</p>
+      <a class="btn" href="https://substack.com/@milenaboc" target="_blank" rel="noopener">Read on Substack</a>
+    </div>
+  </div>
+</section>
+
+<section id="connect">
+  <div class="wrap">
+    <span class="numeral">V</span>
+    <h2 class="section-title"><span class="eyebrow">Connect</span>Find me <span class="cursive">here</span></h2>
+    <div class="connect-grid">
+      <a class="connect-link" href="https://uk.linkedin.com/in/milenaboc" target="_blank" rel="noopener">
+        <span class="icon-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="8" y1="11" x2="8" y2="16"></line><circle cx="8" cy="8" r="0.6"></circle><path d="M12 16v-3.2c0-1.4 1-2.3 2.2-2.3 1.2 0 1.8 0.9 1.8 2.3V16"></path></svg>
+          LinkedIn
+        </span>
+        <span class="arrow">&#8599;</span>
+      </a>
+      <a class="connect-link" href="https://www.instagram.com/milena_boc/" target="_blank" rel="noopener">
+        <span class="icon-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17" cy="7" r="0.6"></circle></svg>
+          Instagram
+        </span>
+        <span class="arrow">&#8599;</span>
+      </a>
+      <a class="connect-link" href="https://substack.com/@milenaboc" target="_blank" rel="noopener">
+        <span class="icon-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v3H4z"></path><path d="M4 9h16v2.5H4z"></path><path d="M4 13.5h16L12 20.5z"></path></svg>
+          Substack
+        </span>
+        <span class="arrow">&#8599;</span>
+      </a>
+      <a class="connect-link" href="https://github.com/Milena-Boc" target="_blank" rel="noopener">
+        <span class="icon-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c-5.25 0-9.5 4.25-9.5 9.5 0 4.2 2.73 7.77 6.51 9.03.47.09.65-.2.65-.46 0-.23-.01-.98-.01-1.78-2.65.58-3.21-1.13-3.21-1.13-.43-1.1-1.06-1.39-1.06-1.39-.86-.6.07-.58.07-.58.96.07 1.46.98 1.46.98.85 1.46 2.24 1.04 2.78.79.09-.62.34-1.04.6-1.28-2.12-.24-4.34-1.06-4.34-4.72 0-1.04.37-1.9.98-2.56-.1-.24-.43-1.22.09-2.54 0 0 .8-.26 2.62.98a9.1 9.1 0 0 1 4.77 0c1.82-1.24 2.62-.98 2.62-.98.52 1.32.19 2.3.09 2.54.61.66.98 1.52.98 2.56 0 3.67-2.23 4.48-4.35 4.71.34.3.65.88.65 1.78 0 1.28-.01 2.32-.01 2.64 0 .26.18.56.66.46A9.51 9.51 0 0 0 21.5 12c0-5.25-4.25-9.5-9.5-9.5z"></path></svg>
+          GitHub
+        </span>
+        <span class="arrow">&#8599;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Milena Boc &middot; Cambridge, United Kingdom &middot; &copy; 2026</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script>
+(function () {
+  var reduceMotion = document.documentElement.classList.contains('reduced-motion');
+  var hasLenis = typeof window.Lenis !== 'undefined';
+  var hasGSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+
+  // Smooth scroll (skipped entirely under reduced-motion)
+  if (!reduceMotion && hasLenis) {
+    var lenis = new Lenis({ duration: 1.1, easing: function (t) { return 1 - Math.pow(1 - t, 3); } });
+    if (hasGSAP) {
+      gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+      gsap.ticker.lagSmoothing(0);
+      lenis.on('scroll', ScrollTrigger.update);
+    } else {
+      requestAnimationFrame(function raf(time) { lenis.raf(time); requestAnimationFrame(raf); });
+    }
+  }
+
+  // Reduced-motion or failed CDN load: drop the hidden-state hook so
+  // nothing declared under .js-anim stays permanently invisible.
+  if (reduceMotion || !hasGSAP) {
+    document.documentElement.classList.remove('js-anim');
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 1. Hero load sequence
+  var hero = document.querySelector('.hero');
+  function revealHero() { hero.classList.add('is-loaded'); }
+  if (document.readyState === 'complete') revealHero();
+  else window.addEventListener('load', revealHero);
+
+  // 3+4. Scroll reveals with staggered children + numeral scale-in
+  function revealGroup(selector, trigger, staggerMs) {
+    var els = gsap.utils.toArray(selector);
+    if (!els.length) return;
+    if (staggerMs) {
+      els.forEach(function (el, i) { el.style.transitionDelay = (i * staggerMs) + 'ms'; });
+    }
+    ScrollTrigger.create({
+      trigger: trigger, start: 'top 85%', once: true,
+      onEnter: function () { els.forEach(function (el) { el.classList.add('is-in'); }); }
+    });
+  }
+
+  revealGroup('#story .wrap > *:not(.numeral)', '#story');
+  revealGroup('#experience .subhead, #experience .timeline-item, #experience .grid-2 > .card', '#experience', 70);
+  revealGroup('#projects .grid-2 > .card', '#projects', 70);
+  revealGroup('#writing .writing-block', '#writing');
+  revealGroup('#connect .connect-link', '#connect', 70);
+
+  gsap.utils.toArray('.numeral').forEach(function (el) {
+    ScrollTrigger.create({
+      trigger: el.closest('section'), start: 'top 85%', once: true,
+      onEnter: function () { el.classList.add('is-in'); }
+    });
+  });
+
+  // 5. Sticky header state
+  var header = document.querySelector('header');
+  ScrollTrigger.create({
+    trigger: '.hero', start: 'bottom top',
+    onEnter: function () { header.classList.add('scrolled'); },
+    onLeaveBack: function () { header.classList.remove('scrolled'); }
+  });
+
+  // 6. Light parallax
+  function parallax(selector, px) {
+    var el = document.querySelector(selector);
+    if (!el) return;
+    gsap.to(el, {
+      y: px, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+  }
+  parallax('.hero-photo-frame img', 30);
+  parallax('.story-photo img', 20);
+
+  // 9. Experience timeline: self-drawing line
+  var track = document.querySelector('.timeline-track');
+  var line = track && track.querySelector('.timeline-line line');
+  function setupTimelineLine() {
+    if (!track || !line) return;
+    var h = track.getBoundingClientRect().height;
+    line.setAttribute('y2', h);
+    var len = line.getTotalLength();
+    line.style.strokeDasharray = len;
+    line.style.strokeDashoffset = len;
+    ScrollTrigger.create({
+      trigger: track, start: 'top 75%', end: 'bottom 60%', scrub: 0.6,
+      onUpdate: function (self) { line.style.strokeDashoffset = len * (1 - self.progress); }
+    });
+  }
+  if (document.readyState === 'complete') setupTimelineLine();
+  else window.addEventListener('load', setupTimelineLine);
+
+  // 10. Writing section crossfade (background-color, the one non-transform/opacity exception)
+  var writing = document.getElementById('writing');
+  if (writing) {
+    gsap.fromTo(writing,
+      { backgroundColor: '#F6F0E3' },
+      {
+        backgroundColor: '#2E2118', ease: 'none',
+        scrollTrigger: { trigger: writing, start: 'top bottom', end: 'top 40%', scrub: true }
+      }
+    );
+  }
+
+  ScrollTrigger.refresh();
+})();
+</script>
+</body>
+</html>
