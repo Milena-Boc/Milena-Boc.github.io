@@ -258,10 +258,44 @@
 <meta property="og:description" content="Exploring what comes next in hospitality.">
 <meta property="og:image" content="https://milena-boc.github.io/images/portrait.jpg">
 <meta name="twitter:card" content="summary_large_image">
+
+<style id="cover-split">
+  .cover-band { position: relative; background: linear-gradient(to bottom, var(--cover) 0, var(--cover) var(--split), var(--ground) var(--split)); }
+  .cover-band::before { content: ""; position: absolute; inset: 0 0 auto 0; height: var(--split); background: var(--cover-tex, none) center / cover; opacity: var(--tex-o, 0); pointer-events: none; }
+  .cover-band > * { position: relative; }
+  .cover-band .paper { background: none; }
+  .cover-band .strip .wrap, .cover-band .strip nav a, .cover-band .masthead .wordmark { color: #FFF8E8; }
+  .cover-band .masthead .dateline { color: #FFF8E8; border-color: #FFF8E8; }
+  .cover-wrap { padding-top: clamp(28px, 4vw, 48px); }
+  .cover-band .cover .frame { aspect-ratio: 16 / 9; padding: 0; background: none; border-radius: 0; }
+  .cover-band .cover .frame img { border-radius: 0; object-position: 50% 30%; }
+  .cover-band .cover figcaption { text-align: left; }
+  .spread { padding-top: clamp(32px, 5vw, 56px); }
+  .spread .wrap { grid-template-columns: minmax(0, 1fr); }
+  .opening { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: clamp(32px, 5vw, 72px); padding-top: 0; align-items: start; }
+  .opening > * { grid-column: 1; }
+  .opening > .glance { grid-column: 2; grid-row: 1 / span 3; }
+  .opening > .contents { grid-column: 2; grid-row: 4 / span 3; }
+  #reach { background: var(--cover); color: #FFF8E8; }
+  #reach .dept-head { border-color: rgba(255,248,232,.6); }
+  #reach h2, #reach .stat .num, #reach .stat .label, #reach .dept-no, #reach .dept-no b, #reach .stat .num small { color: #FFF8E8; }
+  #reach .accent { color: #DAD9D1; }
+  #reach p, #reach .detail, #reach .source { color: #F0EDE8; }
+  #reach .stat + .stat { border-color: rgba(255,248,232,.25); }
+  .dept-no b { font-size: clamp(2.6rem, 5vw, 3.6rem); line-height: 1; font-weight: 700; }
+  @media (max-width: 860px) {
+    .cover-band .cover .frame { aspect-ratio: 4 / 5; }
+    .opening { grid-template-columns: minmax(0, 1fr); }
+    .opening > .glance, .opening > .contents { grid-column: 1; grid-row: auto; }
+  }
+</style>
+<style>:root{--cover:#81351A;--cover-tex:url("images/texture-heritage-leather.jpg");--tex-o:1;--split:62%;}</style>
+<style>.strip .wrap, .masthead .dateline { text-align: left; } .strip .right { text-align: right; }</style>
 </head>
 <body>
 
 
+<div class="cover-band">
 <div class="paper">
 <div class="strip">
   <div class="wrap smallcaps">
@@ -287,14 +321,17 @@
   </div>
 </header>
 </div>
+  <div class="wrap cover-wrap">
+    <figure class="cover">
+      <div class="frame"><img src="images/portrait.jpg" alt="Milena Boc in a navy blazer, standing in a hotel lobby" width="1300" height="1316" fetchpriority="high"></div>
+      <figcaption>Milena Boc, photographed in Cambridge.</figcaption>
+    </figure>
+  </div>
+</div>
 
 <main>
   <section class="spread" aria-label="Introduction">
     <div class="wrap">
-      <figure class="cover">
-        <div class="frame"><img src="images/portrait.jpg" alt="Milena Boc in a navy blazer, standing in a hotel lobby" width="1300" height="1316" fetchpriority="high"></div>
-        <figcaption>Milena Boc, photographed in Cambridge.</figcaption>
-      </figure>
       <div class="opening">
         <p class="kicker smallcaps">The opening</p>
         <h2 style="font-size:var(--h1);line-height:1.06;letter-spacing:-.012em">Exploring <span class="accent">what comes next</span> in hospitality</h2>
