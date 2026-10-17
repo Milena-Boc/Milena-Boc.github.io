@@ -133,4 +133,4 @@ OUTPUT
 - **Numbers with sources and dates.** They earn trust; rounded boasts lose it.
 - **A personal section.** It is often the part people remember.
 
-*Learn. Connect. Experiment. Inspire.*
+*Learn. Connect. Experiment.*
